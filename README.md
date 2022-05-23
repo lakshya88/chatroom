@@ -12,7 +12,6 @@ Creating a chatroom using Laravel and MySQL.
 Types of information we need to handle:
 - Messages
 - Information about channels
-- Read/delivered receipts
 - In case of images, store metadata in DB which points to the file in a distributed file system like S3.
 #Model to use:
 Push model: Users can keep a connection open with the server and can depend upon the server to notify them whenever there are new messages.
