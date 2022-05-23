@@ -16,27 +16,8 @@ Types of information we need to handle:
 - In case of images, store metadata in DB which points to the file in a distributed file system like S3.
 #Model to use:
 Push model: Users can keep a connection open with the server and can depend upon the server to notify them whenever there are new messages.
-#How to maintain an open connection:
-
-
-#DB Schema:
-Messages(Table):
-	- _id: String
-	- channel_id: String
-	- sender_id: String
-	- timestamp: Datetime
-	- message: String
-Channel(Table):
-	-  _id: String
-	- org_id: String
-	- channel_id: String
-	- last_seen: Datetime
-Receipts(Table):
-	- _id: String
-	- org_id: String
-	- channel_id: String
-	- user_id: String
-	- timestamp: Datetime
+#DB Used: 
+MySQL
 
 #Installation:
 1. Install laravel via composer. Follow the link to set up laravel on your machine: https://laravel.com/docs/9.x/installation#getting-started-on-linux
