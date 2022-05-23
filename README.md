@@ -1,5 +1,7 @@
 # chatroom
 Creating a chatroom using Laravel and MySQL.
+
+
 #assumptions
 - Type of messages shared in chat: text only 
 - Number of users communicating simultaneously: 1000
@@ -12,6 +14,10 @@ Types of information we need to handle:
 - Information about channels
 - Read/delivered receipts
 - In case of images, store metadata in DB which points to the file in a distributed file system like S3.
+#Model to use:
+Push model: Users can keep a connection open with the server and can depend upon the server to notify them whenever there are new messages.
+#How to maintain an open connection:
+
 
 #DB Schema:
 Messages(Table):
@@ -32,4 +38,5 @@ Receipts(Table):
 	- user_id: String
 	- timestamp: Datetime
 
-
+#Installation:
+1. Install laravel via composer. Follow the link to set up laravel on your machine: https://laravel.com/docs/9.x/installation#getting-started-on-linux
